@@ -1,0 +1,130 @@
+regular expressionm - a sequence of charactors that define a search pattern 
+
+/[a-z0-p]+/im  -- regex syntax
+
+
+
+30 different regex engines that are widely used
+
+perl-made largest step forward
+
+Regex Engine/ interpreter library 
+	=> Engine Version 
+		=> implement in programming language
+			
+			
+			
+\b - backspace
+
+
+
+Positive Character Class
+
+way to say any of these characters is a match
+[abcdef]
+[a-f]
+[a-f_%0-9]
+
+
+Nevative Character Class
+
+[^abcdef]
+[^a-f]
+[^a-f_%0-9]
+
+
+Matching Special Characters
+
+[A-Za-z_-] 
+[--/A-Z]
+[A-z+--]
+
+
+make sure the carrot is at the end
+[A-Za-z^]
+
+
+Wildcard
+
+. = will match any character expect new line, used within a character class it 
+loses its special meaning
+
+. + quantifier will make regular expression slow
+
+
+Quantifiers and Greediness 
+? = zero or one times
+* = zero or more times
++ = one or more times
+
+Repitition Quantifiers
+
+{n} = exactly n times
+{n,} = n or more times(unlimited)
+{n,m} = between n and m times
+{,m} =  between 0 and m times, same as {0,m}
+
+Quantifies Apply to Units
+
+
+PCRE- left-most(first) match
+POSIX- left-most Longest natch
+
+
+
+
+
+Sub-patterns and Grouping
+	create a sub-expression
+		-Delimit alernations
+		-Repetiion
+
+
+\ used for escaping
+	- remove special meaning from meta-characters
+	- give pecial meaning to ordinary characters
+Without \ code can
+	- regex will break
+	- Syntad or compile errors
+will not happen with .
+
+
+Using Arbitrary Input
+'\b\Qe.mail+addy@test.com\E\b'
+	- anything in between 'b\Q will be interpreted as literal and wont be interpreed by Rejex compiler
+	
+
+Shortcodes - pre-defined character classes
+
+
+\d - digits
+\w - words
+\s - space
+ negated
+ \D - non-digits
+ \W - non-words
+ \S - non-spaces
+ 
+ 
+ 
+ PCRE7.2+ Extra shortcodes
+ 
+ \h - horizontal spaces
+ \v -vertical spaces
+ 
+ 
+Unicode Shortcode Syntax
+ \p{identifier} positive
+ \P{ideneifier} Negative
+  
+  
+  Category-based Unicode shortcodes
+  Letters \p{L}
+  Mars - \p{M}
+  Numbers - \p{N}
+  Punctuation - \p{P}
+  Symbols - \p{Z}
+  Other - \p{C}
+  
+
+	
